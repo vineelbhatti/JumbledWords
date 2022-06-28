@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+</head>
+<body>
+<button onclick="window.location.href = '/';">Back</button>
+<div class="jumbotron text-center" >
+    <h1>Results</h1>
+</div>
+
+<h1 class="text-center">{{score}} out of {{count}}</h1>
+{% if grade == 'A' %}
+
+<h1 class="text-center">
+<font color="green" >Grade: {{ grade }}</font>
+</h1>
+
+<h1 class="text-center">
+ <font color="green" > {{ message }}  </font> &#128512
+</h1>
+{% endif %}
+{% if grade == 'B' %}
+<h1 class="text-center">
+<font color="lime" >Grade: {{ grade }}</font>
+</h1>
+
+<h1 class="text-center">
+ <font color="lime" > {{ message }}</font> &#128578
+</h1>
+{% endif %}
+{% if grade == 'C' %}
+<h1 class="text-center">
+<font color="yellow" >Grade: {{ grade }}</font>
+</h1>
+
+<h1 class="text-center">
+ <font color="yellow" > {{ message }}</font> &#128528
+</h1>
+{% endif %}
+{% if grade == 'D' %}
+<h1 class="text-center">
+<font color="orange" >Grade: {{ grade }}</font>
+</h1>
+
+<h1 class="text-center">
+ <font color="orange" > {{ message }}</font> &#128542
+</h1>
+{% endif %}
+{% if grade == 'F' %}
+<h1 class="text-center">
+<font color="red" class="text-center">Grade: {{ grade }}</font>
+</h1>
+
+<h1 class="text-center">
+ <font color="red" > {{ message }}</font> &#129324
+</h1>
+{% endif %}
+{% if grade == 'X' %}
+<h1 class="text-center">
+&#129351<font color="maroon" class="text-center">CONGRATULATIONS!</font>&#129351
+</h1>
+
+<h1 class="text-center">
+&#128175 <font color="Maroon" > {{ message }}</font> &#128175
+</h1>
+{% endif %}
+
+</body>
+</html>
